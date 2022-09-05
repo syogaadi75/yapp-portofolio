@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&display=swap');
+
+* { 
+    font-family: 'Poppins', sans-serif; 
+}
+
+.font-lora {
+    font-family: 'Lora', serif;
+}
+  
+body {
+    @apply bg-dark;
+}
+
+.fullscreen-enabled {
+    @apply bg-dark;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+  
+.nav-active {
+    @apply lg:border-b-2 border-primary border-dashed;
+}
+.nav-active span {
+    @apply text-primary;
+}
+
+.hamburger-line {
+    @apply w-[30px] h-[2px] my-2 block bg-primary;
+}
+
+.hamburger-active > span:nth-child(1){
+    @apply rotate-45;
+}
+.hamburger-active > span:nth-child(2){
+    @apply  -translate-x-4 scale-0;
+}
+.hamburger-active > span:nth-child(3){
+    @apply -rotate-45;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .react-animation {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.arrow-btn {
+    animation: arrowAnimation 1s linear alternate infinite;  
+}
+
+.y-card {
+    @apply bg-dark rounded-lg w-[170px] lg:mx-4 h-[200px] lg:w-[250px] lg:h-[250px] shadow-2xl hover:shadow-3xl hover:bg-primary hover:text-dark hover:-translate-y-5 transition-all duration-300;
+}
+
+.y-card-body {
+    @apply px-4 lg:px-6 mt-3 pb-3 text-xs md:text-sm tracking-tight;
+}
+
+.skill-card {
+    @apply rounded-xl w-[75px] lg:mx-4 h-[75px] lg:w-[120px] lg:h-[120px] flex justify-center items-center flex-col;
+}
+
+.skill-card img {
+    @apply w-[100px] ;
+}
+
+.show-dialog-project {
+    @apply opacity-100 -translate-y-[19rem] transition-all duration-300 ease-in-out;
+}
+
+.hide-dialog-project {
+    @apply opacity-0 translate-y-[19rem] transition-all duration-300 ease-in-out;
+}
+
+/* Typing Name */
+.will-change-transform {
+    will-change: transform;
+}
+
+.cursor::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    animation: cursor 0.6s linear infinite alternate;
+    will-change: opacity;
+    @apply bg-light;
+}
+  
+@keyframes cursor {
+    0%,
+    40% {
+        opacity: 1; 
+    }
+
+    60%,
+    100% {
+        opacity: 0;
+    }
+}
+/* End Typing Name */
+
+#cover-services { 
+    animation: coverServices 2s linear alternate infinite; 
+}
+
+#cover-skills { 
+    @apply drop-shadow-2xl-primary ; 
+}
+#cover-skills path { 
+    @apply fill-neutral-800; 
+}
+
+#text-cover-skills {
+    @apply w-[200px] lg:w-[300px] drop-shadow-2xl-primary;
+}
+#text-cover-skills path {
+    @apply fill-primary lg:fill-neutral-800; 
+} 
+
+
+@keyframes coverServices {
+    from {
+        filter: drop-shadow( 0px 0px 0px rgba(248, 140, 12, 0)); 
+    }
+    to {  
+        filter: drop-shadow( 0px 0px 10px rgba(248, 140, 12, 1));
+    }
+}
+
+@keyframes blinking {
+    from { 
+    }
+    to {  
+        border-radius: 10px;
+        border-color: rgba(250, 204, 21, 1);
+    }
+}
+
+@keyframes arrowAnimation {
+    0% {
+        transform: translateY(-10%);
+    }
+    100% {
+        transform: translateY(10%);
+    }
+}
