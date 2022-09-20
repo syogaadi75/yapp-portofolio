@@ -1,8 +1,4 @@
 import { ArrowUpIcon } from '@heroicons/react/24/outline'
-import aset from '../img/projects/aset.png'
-import elibrary from '../img/projects/elibrary.png'
-import invoice from '../img/projects/invoice.png'
-import logistik from '../img/projects/logistik.png' 
 import MakeWith from './MakeWith'
 
 function CardMyProject({project, setDataDialog, setShow}) {
