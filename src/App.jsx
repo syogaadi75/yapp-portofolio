@@ -20,7 +20,7 @@ function App(props) {
   return (
     <>
       <FullScreen handle={handleFullScreen}>
-        <Header setCurrentPage={setCurrentPage} handleFullScreen={handleFullScreen} currentPage={currentPage} /> 
+        <Header setCurrentPage={setCurrentPage} handleFullScreen={handleFullScreen} currentPage={currentPage} />
         <ReactPageScroller
           pageOnChange={handleBeforePageChange}
           customPageNumber={currentPage}

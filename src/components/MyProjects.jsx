@@ -87,7 +87,7 @@ function MyProjects() {
       ]
     },
     {
-      title: 'E-Library App',
+      title: 'Aplikasi E-Library',
       link: 'https://library.fopegram.id/',
       simple_description: 'Adalah aplikasi pembuatan materi dan soal berdasarkan library dan kelasnya, terdapat 2 role (Admin, Pengguna).',
       description: 'Adalah aplikasi pembuatan materi dan soal berdasarkan library dan kelasnya, terdapat 2 role (Admin, Pengguna) untuk admin dapat membuat kelas, library sesuai kelasnnya, materi dan soal sesuai library serta pembagian kelas untuk penggunanya. Pengguna dapat melihat library sesuai kelas dan melihat materi serta mengerjakan soal yang tersedia.',
@@ -112,24 +112,16 @@ function MyProjects() {
       ]
     },
     {
-      title: 'Invoice App',
-      link: 'https://yaap-invoice.web.app',
-      mobile_link: 'https://drive.google.com/file/d/17nyXyXfbva6nZeT5wd50juPeLY1bn8vK/view?usp=sharing',
-      simple_description: 'Aplikasi ini adalah aplikasi pendataan invoice dan laporan invoice serta piutang.',
-      description: 'Aplikasi ini adalah aplikasi pendataan invoice dan laporan invoice serta piutang.',
+      title: 'Aplikasi Streaming',
+      link: 'https://animey.vercel.app/',
+      simple_description: 'Didalam aplikasi ini Anda dapat menonton film/anime secara langsung tanpa autentikasi.',
+      description: 'Didalam aplikasi ini Anda dapat menonton film/anime secara langsung tanpa autentikasi. Didalam backend dapat mengelola data film dan episode.',
       skills: [
-        { text: 'Vue Js', svg: vueSvg },
-        { text: 'Firebase', svg: firebaseSvg },
-        { text: 'Capacitor', svg: capacitorSvg },
+        { text: 'React Js', svg: reactSvg },
+        { text: 'MongoDB', svg: mongodbSvg },
+        { text: 'Node Js', svg: nodeSvg },
         { text: 'HTML', svg: htmlSvg },
         { text: 'CSS', svg: cssSvg },
-      ],
-      auth: [
-        {
-          level: 'Admin',
-          username: 'admin@gmail.com',
-          password: 'Asdfghjk123..'
-        },
       ]
     },
   ]
@@ -157,12 +149,13 @@ function MyProjects() {
         </span>
       </div>
 
-      {dataDialog && (<DialogProject setShow={setShow} show={show} data={dataDialog} />)}
 
       <div className="flex flex-wrap justify-center items-center lg:gap-x-24 lg:gap-y-10">
-        {data.map((project, i) => (
-          <CardMyProject setShow={setShow} setDataDialog={setDataDialog} key={i} project={project} />
-        ))}
+        {show ? (<DialogProject setShow={setShow} show={show} data={dataDialog} />) : (
+          data.map((project, i) => (
+            <CardMyProject setShow={setShow} setDataDialog={setDataDialog} key={i} project={project} />
+          ))
+        )}
       </div>
     </>
   )

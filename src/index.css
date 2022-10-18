@@ -84,14 +84,6 @@ a {
     @apply w-[100px] ;
 }
 
-.show-dialog-project {
-    @apply opacity-100 -translate-y-[19rem] transition-all duration-300 ease-in-out;
-}
-
-.hide-dialog-project {
-    @apply opacity-0 translate-y-[19rem] transition-all duration-300 ease-in-out;
-}
-
 /* Typing Name */
 .will-change-transform {
     will-change: transform;

@@ -30,12 +30,12 @@ function Header({ currentPage, setCurrentPage, handleFullScreen }) {
 
     return (
         <>
-            <header className="bg-transparent absolute top-0 left-0 w-full flex items-center z-[99999999]">
+            <header className="bg-dark absolute top-0 left-0 w-full flex items-center z-[99999999]">
                 <div className="container">
                     <div className="flex items-center justify-between relative">
                         <div className="ml-4 lg:ml-10">
                             <span className="font-bold text-lg text-primary block py-6">
-                                <img className="w-20" src={logo} alt="Logo" />
+                                <img className="w-16" src={logo} alt="Logo" />
                             </span>
                         </div>
                         <div className="flex items-center text-light">
